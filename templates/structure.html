@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pechay Dashboard</title>
+
+    <!-- Link for Boxicons --> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/structure.css') }}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div> -->
+            <div class="header-right">
+                <i class='bx bx-bell'></i>
+                <i class='bx bx-envelope'></i>
+            </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <main class="main-container">
+            <h1 class="center-title">
+                <i class="fas fa-leaf" style="font-size: 35px; color: #4CAF50; margin-right: 10px;"></i>
+                Leveraging Pechay Monitoring Dashboard
+            </h1>
+            <div class="sensor-container">
+                <div class="sensor">
+                    <h2>Temperature</h2>
+                    <p id="temperature">-- °C</p>
+                </div>
+                <div class="sensor">
+                    <h2>Humidity</h2>
+                    <p id="humidity">-- %</p>
+                </div>
+                <div class="sensor">
+                    <h2>pH Level</h2>
+                    <p id="ph-level">--</p>
+                </div>
+                <div class="sensor">
+                    <h2>Lighting Levels</h2>
+                    <p id="lighting-level">-- lux</p>
+                </div>
+                <div class="sensor">
+                    <h2>Nutrient Levels</h2>
+                    <p id="nutrient-level">-- ppm</p>
+                </div>
+                <div class="toggle-sensor">
+                    <h2>Ventilation Control</h2>
+                    <button id="toggle-ventilation">Toggle Ventilation</button>
+                </div>
+                <div class="sensor">
+                    <h2>Water Quality</h2>
+                    <p id="water-quality">--</p>
+                </div>
+            </div>
+            <!-- <div class="ventilation-control">
+                <h2>Ventilation Control</h2>
+                <button id="toggle-ventilation">Toggle Ventilation</button>
+            </div> -->
+            <div class="camera-container">
+                <video id="camera-feed" autoplay muted></video>
+                <button id="toggle-camera"> Turn Camera: On</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS Script -->
+    <script src="{{ url_for('static', filename='js/structure.js') }}"></script>
+</body>
+</html>
